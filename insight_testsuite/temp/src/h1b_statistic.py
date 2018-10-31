@@ -11,16 +11,6 @@ from collections import Counter
 
 
 def counting(filename, visa_info, count_item, visa_status = "CERTIFIED"):
-    """ Read csv file, filter data based on visa status and count number per request
-    
-    Args:
-        filename: the name of csv file
-        visa_info: visa case status
-        count_item: the column needed to be counted
-        visa_status: different visa status (default: CERTIFIED)
-        
-    Returns: h1b visa counting and total number of cases """
-    
     
     with open(filename, encoding = "utf8", newline = '') as csvfile:
         reader = csv.DictReader(csvfile, delimiter = ";")
@@ -32,16 +22,6 @@ def counting(filename, visa_info, count_item, visa_status = "CERTIFIED"):
 
 
 def sort_values(counts, total_values, output_number = 10):
-    """ Sort the counted items by NUMBER_CERTIFIED_APPLICATION, and then alphabetically by name if numbers are equal
-    
-    Args: 
-        counts: counting number for each item
-        total_values: total number of filtered data
-        output_number: output rows (default: 10)
-        
-    Return: 
-        a list of output containing required rows"""
-        
     
     counts_sorted = sorted(counts.items(), key = lambda x: (-x[1], x[0]))
     counts_with_percent = [list(tup) + [str(round(tup[1] / total_values * 100, 1)) + '%'] for tup in counts_sorted]
@@ -51,16 +31,6 @@ def sort_values(counts, total_values, output_number = 10):
 
 
 def write_file(output_filename, counts_statistic, header):
-    """Write counting results into txt file
-    
-    Args:
-        output_filename: the name of output file
-        counts_statistic: a list of counting results
-        header: the header of the txt file
-        
-    Return:
-        The txt file containing counting results"""
-        
     
     title = ";".join(header) + '\n'
     with open(output_filename, "w") as writefile:
@@ -72,17 +42,6 @@ def write_file(output_filename, counts_statistic, header):
 
 
 def statistic_results(filename, visa_info, count_item, output_file, header):
-    """Assembe all the steps to output txt files with counting results
-    
-    Args:
-        filename: the name of csv file 
-        visa_info: visa case status
-        count_item: the column needed to be counted
-        output_file: the name and location of output file
-        header: the header of output txt file
-        
-    Return: 
-        txt files with counting results"""
     
     counts, total_values = counting(filename, visa_info, count_item)
     counts_statistic = sort_values(counts, total_values)
