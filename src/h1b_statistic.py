@@ -22,7 +22,7 @@ def counting(filename, visa_info, count_item, visa_status = "CERTIFIED"):
     Returns: h1b visa counting and total number of cases """
     
     
-    with open(filename, encoding = "utf8", newline = '') as csvfile:
+    with open(filename, encoding = "utf8") as csvfile:
         reader = csv.DictReader(csvfile, delimiter = ";")
         filtered = filter(lambda x: x[visa_info] == visa_status, reader)
         counts = Counter(row[count_item] for row in filtered)
