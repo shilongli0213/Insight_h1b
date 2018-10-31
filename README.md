@@ -18,4 +18,4 @@ This program consists of four functions which deal with file reading, data count
 
 # How to run program
 
-The user needs to put any csv file to be analyzed into the input folder, and corresponding filename is required to input into the program. The visa information will be specified by the user and input into the program. The items to be counted can be specified by users (for instance, JOB_TITLE, WORKSITE_STATE), then the program will automatically do the statistical work based on the items provided by the users.  The users can also specify the names of output files which be generated into output folder.
+The user needs to put any csv file to be analyzed into the input folder, and corresponding filename is required to input into the program. The visa information will be specified by the user and input into the program. The items to be counted can be specified by users (for instance, JOB_TITLE, WORKSITE_STATE), then the program will automatically do the statistical work based on the items provided by the users.  The users can also specify the names of output files which can be generated into output folder.
