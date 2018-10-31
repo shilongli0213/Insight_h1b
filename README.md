@@ -13,7 +13,7 @@ As described in the Insight challenge, the purpuse of program mechanism is to fi
 
 # Program
 
-This program consists of four functions which deal with file reading, data counting, data sorting, and data writing, respectively.  The users can input the name of the file to be analyzed which will be read by the program. The visa information can be used to filter the data, for example CERTIFIED, DENIED, etc.  The users can specify their own items utlized to count the number of H1B visa applications. Finally, the users can point out the output file and directory.
+This program consists of four functions which deal with file data reading, data counting, data sorting, and data writing, respectively.  The users can input the name of the file to be analyzed which will be read by the program. The visa information can be used to filter the data, for example, CERTIFIED, DENIED, etc.  The users can specify their own items utlized to count the number of H1B visa applications. Finally, the users can point out the output file and directory.
 
 
 # How to run program
