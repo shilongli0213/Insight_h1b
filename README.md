@@ -8,7 +8,7 @@
 # Problem
 
 
-As described in the Insight challenge, the purpuse of program mechanism is to find **Top 10 Occupations** and **Top 10 States** for **certified** visa applications
+As described in the Insight challenge, the purpose of program mechanism is to find **Top 10 Occupations** and **Top 10 States** for **certified** visa applications
 
 
 # Program
